@@ -1,0 +1,84 @@
+{
+  "model_name": "tfidf_logreg_full_dataset",
+  "model_type": "TfidfVectorizer + LogisticRegression",
+  "created_at": "2026-04-28T18:21:09.185303",
+  "dataset_path": "/content/training_csv.csv",
+  "prepared_data_path": "/content/hr_ranking_artifacts/prepared_model_df.csv",
+  "model_path": "/content/hr_ranking_artifacts/tfidf_logreg_full_dataset.joblib",
+  "rows_total": 93755,
+  "rows_train": 70316,
+  "rows_test": 23439,
+  "label_distribution_total": {
+    "0": 78856,
+    "1": 14899
+  },
+  "test_metrics": {
+    "roc_auc": 0.7464577484879414,
+    "pr_auc": 0.38791088678230023
+  },
+  "ranking_metrics": [
+    {
+      "top_k": 10,
+      "positives_in_top_k": 9,
+      "precision_at_k_percent": 90.0,
+      "recall_at_k_percent": 0.24
+    },
+    {
+      "top_k": 20,
+      "positives_in_top_k": 19,
+      "precision_at_k_percent": 95.0,
+      "recall_at_k_percent": 0.51
+    },
+    {
+      "top_k": 30,
+      "positives_in_top_k": 28,
+      "precision_at_k_percent": 93.33,
+      "recall_at_k_percent": 0.75
+    },
+    {
+      "top_k": 50,
+      "positives_in_top_k": 41,
+      "precision_at_k_percent": 82.0,
+      "recall_at_k_percent": 1.1
+    },
+    {
+      "top_k": 100,
+      "positives_in_top_k": 81,
+      "precision_at_k_percent": 81.0,
+      "recall_at_k_percent": 2.17
+    },
+    {
+      "top_k": 150,
+      "positives_in_top_k": 118,
+      "precision_at_k_percent": 78.67,
+      "recall_at_k_percent": 3.17
+    },
+    {
+      "top_k": 200,
+      "positives_in_top_k": 152,
+      "precision_at_k_percent": 76.0,
+      "recall_at_k_percent": 4.08
+    },
+    {
+      "top_k": 500,
+      "positives_in_top_k": 326,
+      "precision_at_k_percent": 65.2,
+      "recall_at_k_percent": 8.75
+    }
+  ],
+  "tfidf_params": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "logreg_params": {
+    "solver": "liblinear",
+    "class_weight": "balanced",
+    "max_iter": 1000
+  }
+}
